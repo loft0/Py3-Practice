@@ -1,0 +1,31 @@
+#Python 3.5 Practice
+#In shell
+>>> 'This is a {c}, and this is a {d}.'.format(c = 'cat', d = 'dog')
+'This is a cat, and this is a dog.'
+>>> s = 'Fa la la la la, la la la la.'
+>>> s.split()
+['Fa', 'la', 'la', 'la', 'la,', 'la', 'la', 'la', 'la.']
+>>> 'Hey      what''s          up?'.split()
+['Hey', 'whats', 'up?']
+>>> s.split('a')
+['F', ' l', ' l', ' l', ' l', ', l', ' l', ' l', ' l', '.']
+>>> string = s.split()
+>>> string
+['Fa', 'la', 'la', 'la', 'la,', 'la', 'la', 'la', 'la.']
+>>> for x in string: print(x)
+
+Fa
+la
+la
+la
+la,
+la
+la
+la
+la.
+>>> newS = ':'.join(string)
+>>> newS
+'Fa:la:la:la:la,:la:la:la:la.'
+>>> newS = '%'.join(string)
+>>> newS
+'Fa%la%la%la%la,%la%la%la%la.'
