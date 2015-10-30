@@ -1,0 +1,50 @@
+#Python 3.5 Practice
+#In shell
+
+#two ways to create dictionaries
+
+
+>>> book = {'1st': 1, '2nd': 2, '3rd': 3}
+>>> book
+{'2nd': 2, '1st': 1, '3rd': 3}
+>>> 
+>>> book = dict(one = 1, two = 2, three = 3)
+>>> book
+{'three': 3, 'two': 2, 'one': 1}
+>>> 
+--------------------------------------------------------
+>>> 
+>>> oth = dict(four = 4, five = 5)
+>>> oth
+{'five': 5, 'four': 4}
+>>> book = dict(one = 1, two = 2, three = 3, **oth)#viewing them together
+>>> book
+{'three': 3, 'five': 5, 'two': 2, 'four': 4, 'one': 1}
+>>> 'four' in oth
+True
+>>> 'four' in book
+True
+>>> 'one' in oth #'one' is not a part of the oth dict.
+False
+>>> for k, v in book.items(): print (k, v)
+
+three 3
+five 5
+two 2
+four 4
+one 1
+>>> book.get('one')
+1
+>>> oth.get('one')
+>>> oth.get('one', 'not found in dict.')#giving it a default when it's not found
+'not found in dict.'
+>>> oth
+{'five': 5, 'four': 4}
+>>> del oth['four']
+>>> oth
+{'five': 5}
+>>> oth.pop('five')
+5
+>>> oth
+{}
+>>> 
