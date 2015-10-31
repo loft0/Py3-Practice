@@ -1,0 +1,21 @@
+#Python 3.5 Practice
+
+
+#read and write
+def main():
+    buffersize = 50000
+    inPo = open('poem.txt', 'r')
+    outPo = open('newPoem.txt', 'w')
+    buffer = inPo.read(buffersize)
+    #inHi = open('sayHi.txt', 'r')
+    #outHi = open('newSayHi.txt', 'w')
+    while len(buffer):#for line in inHi:
+        outPo.write(buffer)
+        print('okay...', end=' ')
+        buffer = inPo.read(buffersize)
+    
+        #print(line, file = outHi, end=' ')
+    print('Done Madam!')
+
+if __name__ == '__main__': main()
+ 
