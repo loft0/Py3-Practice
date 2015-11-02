@@ -1,0 +1,21 @@
+#Python 3.5 Practice
+import sys
+
+def main():
+
+    import random
+    print(random.randint(1,50))
+
+    cards = list(range(52))
+    print(cards)
+    random.shuffle(cards)
+    print('Mix it up...')
+    print(cards)
+
+    import datetime
+    present = datetime.datetime.now()
+    print(present)
+    print(present.year, present.month, present.day, present.hour, present.minute)
+
+
+if __name__ == '__main__': main()
