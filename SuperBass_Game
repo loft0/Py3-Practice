@@ -1,0 +1,86 @@
+#Super Bass
+import time
+global gold
+global fish
+
+#you must use capital Y and N for the game to work.
+fish = 0
+gold = 0
+
+def start(): 
+    print('Hello?...')
+
+    name = input('You must be here for the fishing event! What is your name?:')
+    print('Well, welcome ', name, '.')
+    print('There should be good fishing tonight. The more fish you catch, the more you can sell at the shop!')
+
+    choice = input('Keep your eyes open... I hear there are big fish around. Ready to get going? Y/N? ')
+    if choice == 'Y':
+            begin()
+    elif choice == 'N':
+        print('Oh! Bye then!')
+        exit()
+
+
+def begin():
+    global fish
+    global gold
+    
+    print('Get going!')
+
+    if gold > 49:
+        print('The sun rises...')
+        print('Wow! You sold a lot of fish! I hope you had fun and come back next year.')
+        play = input('Would you like to play again? Y/N')
+        if play == 'Y':
+            start()
+        if play == 'N':
+            print('Take care then.')
+            exit()
+            
+
+
+    print('You sit in the boat as a small figuer in the water bites the bait.')
+    catch_fish = input('Pull up? Y/N: ')
+
+    if catch_fish == 'Y':
+        time.sleep(1)
+        print('Look! A bass!')
+        if fish < 2:
+            print("...But I don't hear that super bass.")
+        fish = fish +1
+        print('You have caught', fish, 'fish.')
+        if fish == 3:
+            print('A big, dark figuer appraoches the boat...')
+            catch_fish = input('Pull up? Y/N:')
+            if catch_fish == 'Y':
+                time.sleep(1)
+                print('Wow A Super Bass! Boom-badoom boom, boom badoom-boom!')
+                fish = fish +1
+                print('You have caught', fish, 'fish.')
+                begin()
+            elif catch_fish == 'N':
+                print('Aww man!... it got away.')
+        begin()
+
+    elif catch_fish == 'N':
+        print('The figuer swims away...')
+        sell = input('Would you like to sell your fish? Y/N: ')
+        if sell == 'Y':
+            global gold
+            global fish
+            print('You have sold your fish.')
+            gold = fish * 10
+            fish = 0
+            print('You have ', gold, 'gold.')
+            begin()
+
+        if sell == 'N':
+            print('Then get back out there!')
+            begin()
+    
+
+        
+    
+start()
+          
