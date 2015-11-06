@@ -1,0 +1,9 @@
+print('Let''s find out how long you''ve been alive in days, minutes and seconds. Shall we?')
+name = input('Name: ')
+print('Enter your age,', name, '.')
+age = int(input('Age: '))
+days = age * 365
+minutes = age * 525948
+seconds = age * 31556926
+print(name, ', you have been alive for ', days, 'days ', minutes, 'minutes and ', \
+      seconds, 'seconds! Wow, amazing!')
