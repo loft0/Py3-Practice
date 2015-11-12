@@ -3,7 +3,9 @@ import time
 global gold
 global fish
 
-#you must use capital Y and N for the game to work.
+
+#WARNING: Nicki Minaj joke hidden within...
+#You MUST use capital Y and N when asked for the game to work.
 fish = 0
 gold = 0
 
